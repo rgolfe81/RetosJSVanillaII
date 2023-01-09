@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto01</title>
+</head>
+<body>
+    <script>
+        var figura = prompt ('Introduce la figura para calcular el área');
+        var area;
+        var pi = 3.1416;
+        switch (figura){
+            case 'circulo':
+                var radio = Number ( prompt ('Introduce el radio del circulo'));
+                area = radio*radio*pi;
+                console.log ('El area del circulo es : '+area);
+            break;
+            case 'triangulo':
+                var base = Number ( prompt ('Introduce la base del triangulo'));
+                var altura = Number ( prompt ('Introduce al altura del triangulo'));
+                area = (base*altura)/2;
+                console.log ('El area del triangulo es : '+area);
+            break;
+            case 'cuadrado':
+                var lado1 = Number ( prompt ('Introduce un lado'));
+                var lado2 = Number ( prompt ('Introduce el otro lado'));
+                area = lado1*lado2;
+                console.log ('El area del cuadrado es : '+area);
+            break;
+            default:
+                alert ('La figura introducida no es correcta');
+        }
+    </script>
+</body>
+</html>
