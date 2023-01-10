@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto08</title>
+</head>
+<body>
+    <script>
+        function rellenarArray (){ // rellena un elemento más al array y después muestra todos los elementos del array
+            var elemento = prompt ('Introduce nuevo elemento del array');
+            array.push(elemento);
+            mostrarArray(array);
+        }
+        function mostrarArray (){ // muestra los elementos del array
+            for (i=0; i<array.length; i++){
+                console.log ('Indice '+i+' elemento: '+array[i]);
+            }
+        }
+    var array = [];
+    for (i=1; i<=10; i++){
+        array.push(prompt ('Introduce un elemento para el array'));
+    }
+    var opcion = prompt ('Quieres añadir más elementos al array? (si/no)');
+    if (opcion == 'si'){ // solicitamos si el usuario quiere añadir un elemento más al array, sino muestra el array por consola
+        rellenarArray(array);
+    }
+    else{
+        if (opcion == 'no'){
+            mostrarArray(array);
+        }
+        else{
+            alert ('Error. Debes introducir si o no');
+        }
+    }
+    </script>
+</body>
+</html>

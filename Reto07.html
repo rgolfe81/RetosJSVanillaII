@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto07</title>
+</head>
+<body>
+    <script>
+        function convierteMoneda (euros, moneda){
+            switch (moneda){
+                case 'libras':
+                    var libras = euros*0.86;
+                    return euros+' euros son '+libras+' libras';
+                break;
+                case 'dolares':
+                    var dolares = euros*1.28611;
+                    return euros+' euros son '+dolares+' dolares';
+                break;
+                case 'yenes':
+                    var yenes = euros*129.852;
+                    return euros+' euros son '+yenes+' yenes';
+                break;
+                default:
+                    return 'Has introducido una moneda que no está en el menú';
+                break;
+            }
+        }
+        var euros = Number ( prompt ('Introduce una cantidad de euros'));
+        var moneda = prompt ('Introduce si quieres cambiar a libras, dolares o yenes');
+        console.log (convierteMoneda(euros, moneda));
+    </script>
+</body>
+</html>
