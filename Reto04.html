@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto04</title>
+</head>
+<body>
+    <script>
+        var numero = Number ( prompt ('Introduce un número para calcular su factorial'));
+        function factorial (n){
+            var total = 1;
+            for (i=n; i>=1; i--){
+                total=total*i;
+            }
+        return total;
+        }
+        console.log ('El factorial de '+numero+' es '+factorial(numero));
+    </script>
+</body>
+</html>

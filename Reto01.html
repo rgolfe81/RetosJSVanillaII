@@ -9,24 +9,33 @@
 <body>
     <script>
         var figura = prompt ('Introduce la figura para calcular el área');
-        var area;
         var pi = 3.1416;
+        var area;
+        function areaCirculo (radio, pi){
+            return radio*radio*pi;
+        }
+        function areaTriangulo (base, altura){
+            return (base*altura)/2;
+        }
+        function areaCuadrado (lado1, lado2){
+            return lado1*lado2;
+        }
         switch (figura){
             case 'circulo':
                 var radio = Number ( prompt ('Introduce el radio del circulo'));
-                area = radio*radio*pi;
+                area = areaCirculo(radio, pi);
                 console.log ('El area del circulo es : '+area);
             break;
             case 'triangulo':
                 var base = Number ( prompt ('Introduce la base del triangulo'));
                 var altura = Number ( prompt ('Introduce al altura del triangulo'));
-                area = (base*altura)/2;
+                area = areaTriangulo(base, altura);
                 console.log ('El area del triangulo es : '+area);
             break;
             case 'cuadrado':
                 var lado1 = Number ( prompt ('Introduce un lado'));
                 var lado2 = Number ( prompt ('Introduce el otro lado'));
-                area = lado1*lado2;
+                area = areaCuadrado(lado1, lado2);
                 console.log ('El area del cuadrado es : '+area);
             break;
             default:

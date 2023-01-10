@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto02</title>
+</head>
+<body>
+    <script>
+        var cantidad = Number ( prompt ('Introduce la cantidad de numeros aleatorios a generar'));
+        var min = Number (prompt ('Introduce el valor mínimo del intervalo'));
+        var max = Number (prompt ('Introduce el valor máximo del intervalo'));
+        var intervalo;
+        var aleatorio;
+        intervalo = function (min, max){ //La función genera un número aleatorio dentro del intervalo
+            do{
+            aleatorio = Math.random()*100; //multiplicamos por x100 porque Math.random()genera numeros aleatorios de 0 a 1
+            aleatorio = Math.trunc(aleatorio); //función redondeo sin decimales
+            }
+            while (aleatorio<min || aleatorio>max); //el bucle se repite hasta que el número se encuentre dentro del intervalo
+            return aleatorio;
+        }
+        for (i=1; i<=cantidad; i++){
+            console.log (intervalo(min, max));
+        }
+    </script>
+</body>
+</html>

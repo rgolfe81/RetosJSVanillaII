@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto05</title>
+</head>
+<body>
+    <script>
+        function crearBinario (num){
+            var binario = []; // array vacío, para ir añadiendo elementos del número binario
+            var resto;
+            while (num>=2){
+                resto = Math.floor(num%2); // usamos la función Math.floor para redondear el resultado a la baja
+                binario.unshift(resto); // añade al array, el valor del resto de la división, por delante
+                num = num/2; // ahora el cociente de la división pasa a ser el dividendo
+            }
+            binario.unshift(Math.floor(num)); // añadimos el último cociente al principio del array
+            return binario;
+        }
+        var numero = Number ( prompt ('Introduce un numero para convertir a binario'));
+        console.log(crearBinario (numero));
+    </script>
+</body>
+</html>

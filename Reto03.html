@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto03</title>
+</head>
+<body>
+    <script>
+        var numero = Number ( prompt ('Introduce un numero para saber si es primo'));
+        function primo (){
+            if (numero==0 || numero==1 || numero==4){ //casos especiales fuera del bucle for
+                return false;
+            }
+            else{
+                for (i=2; i<numero-1; i++){ // i empieza desde 2, porque el numero es primo si es divisible entre 1 y si mismo
+                    if (numero%i==0){
+                        return false;
+                    }
+                }
+            }   
+        }
+        if (primo(numero)==false){
+            alert ('El numero no es primo');
+        }
+        else{
+            alert ('El numero es primo');
+        } 
+    </script>
+</body>
+</html>
