@@ -9,8 +9,8 @@
 <body>
     <script>
         function crearBinario (num){
-            var binario = []; // array vacío, para ir añadiendo elementos del número binario
-            var resto;
+            let binario = []; // array vacío, para ir añadiendo elementos del número binario
+            let resto;
             while (num>=2){
                 resto = Math.floor(num%2); // usamos la función Math.floor para redondear el resultado a la baja
                 binario.unshift(resto); // añade al array, el valor del resto de la división, por delante
@@ -19,7 +19,7 @@
             binario.unshift(Math.floor(num)); // añadimos el último cociente al principio del array
             return binario;
         }
-        var numero = Number ( prompt ('Introduce un numero para convertir a binario'));
+        let numero = Number ( prompt ('Introduce un numero para convertir a binario'));
         console.log(crearBinario (numero));
     </script>
 </body>

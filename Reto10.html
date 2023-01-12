@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto10</title>
+</head>
+<body>
+    <script>
+        function esPrimo (numero){ // comprobamos si el número es primo
+            if (numero==0 || numero==1 || numero==4){ //casos especiales fuera del bucle for
+                return false;
+            }
+            else{
+                for (i=2; i<numero-1; i++){ // i empieza desde 2, porque el numero es primo si es divisible entre 1 y si mismo
+                    if (numero%i==0){
+                        return false;
+                    }
+                }
+            }   
+        }
+        function crearArray (tamañoArray){ // crea el array según el tamaño indicado por el usuario
+            let min = prompt ('Introduce el valor mínimo del array');
+            let max = prompt ('Introduce el valor máximo del array');
+            let elemento, i;   
+            for (i=0; i<tamañoArray; i++){
+                do{
+                    elemento = Math.random()*100; //multiplicamos x100 para que los elementos estén entre 0 y 99
+                    elemento = Math.trunc(elemento); //utilizamos esta función para que los elementos no tengan decimales
+                } while (esPrimo(elemento)==false || elemento<=min || elemento>=max); // nos aseguramos que el elemento es primo y se encuentra dentro del intervalo min-max
+                array.push (elemento);
+            }
+            return array;
+        }
+        function mostrarArray (array){ // muestra los elementos del array e indica el elemento mayor
+            let mayor = 0;
+            let i;
+            for (i=0; i<array.length; i++){
+                console.log ('Indice '+i+' elemento: '+array[i]);
+                if (array[i]>mayor){
+                    mayor = array[i];
+                }
+            }
+            console.log ('El elemento mayor del array es '+mayor);
+        }
+        let array = [];
+        let tamañoArray = prompt ('Introduce el tamaño del array');
+        crearArray(tamañoArray);
+        mostrarArray(array);
+    </script>
+</body>
+</html>

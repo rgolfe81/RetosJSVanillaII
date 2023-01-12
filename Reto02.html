@@ -8,11 +8,11 @@
 </head>
 <body>
     <script>
-        var cantidad = Number ( prompt ('Introduce la cantidad de numeros aleatorios a generar'));
-        var min = Number (prompt ('Introduce el valor mínimo del intervalo'));
-        var max = Number (prompt ('Introduce el valor máximo del intervalo'));
-        var intervalo;
-        var aleatorio;
+        let cantidad = Number ( prompt ('Introduce la cantidad de numeros aleatorios a generar'));
+        let min = Number (prompt ('Introduce el valor mínimo del intervalo'));
+        let max = Number (prompt ('Introduce el valor máximo del intervalo'));
+        let intervalo;
+        let aleatorio;
         intervalo = function (min, max){ //La función genera un número aleatorio dentro del intervalo
             do{
             aleatorio = Math.random()*100; //multiplicamos por x100 porque Math.random()genera numeros aleatorios de 0 a 1

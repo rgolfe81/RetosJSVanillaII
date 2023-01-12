@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto11</title>
+</head>
+<body>
+    <script>
+        function multiplicaArrays (){ // esta función devuelve un array como resultado de la multiplicacion de dos arrays
+            let i, elemento;
+            for (i=0; i<tamañoArray; i++){
+                elemento = array1[i] * array2[i];
+                array3.push (elemento);
+            }   
+            return array3;
+        }
+        let array1 = [];
+        let array2 = [];
+        let array3 = [];
+        let tamañoArray = prompt ('Introduce tamaño del array');
+        let i, elemento;
+        for (i=0; i<tamañoArray; i++){ // con este bucle creamos el array de elementos aleatorios
+            elemento = Math.random()*100; // multiplicamos x100 para que los elementos se creen entre 0 y 100
+            elemento = Math.trunc(elemento); // utilizamos esta función para que los elementos no tengan decimales
+            array1.push (elemento);
+        }
+        array2 = array1.slice(); // creamos el segundo array apuntando al primer array
+        for (i=0; i<tamañoArray; i++){ // con este bucle modificamos los valores del segundo array, añadiendo un nuevo elemento aleatorio al principio del array y eliminando el último elemento del array
+            elemento = Math.random()*100; 
+            elemento = Math.trunc(elemento);
+            array2.unshift (elemento);
+            array2.pop ();
+        }
+        multiplicaArrays (array1, array2);
+        console.log (array1,array2,array3);
+    </script>
+</body>
+</html>

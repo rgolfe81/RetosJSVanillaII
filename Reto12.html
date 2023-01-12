@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSVanillaIIReto12</title>
+</head>
+<body>
+    <script>
+    let array1 = [];
+    let array2 = [];
+    let tamañoArray = prompt ('Introduce tamaño del array');
+    let i, elemento;
+    for (i=0; i<tamañoArray; i++){
+        do{
+        elemento = Math.random()*1000; // multiplicamos x1000 para que el elemento random llegue hasta 1000
+        elemento = Math.trunc (elemento); // quitamos los decimales del numero aleatorio
+        } while (elemento<1 || elemento >300); //condición para que el elemento obtenido esté entre 1 y 300
+    array1.push (elemento);
+    }
+    let ultimoDigito = prompt ('Introduce el último dígito de los elementos a recoger para crear un nuevo array');
+    for (i=0; i<array1.length; i++){
+        if (array1[i]%10 == ultimoDigito){ // si dividimos por 10 un número, el resto será igual que la última cifra de ese número
+            array2.push (array1[i]); // creamos el segundo array con los elementos del primer array que cumplen la condición
+        }
+    }
+    console.log(array1,array2);
+    </script>
+</body>
+</html>

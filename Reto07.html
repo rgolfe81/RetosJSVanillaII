@@ -11,15 +11,15 @@
         function convierteMoneda (euros, moneda){
             switch (moneda){
                 case 'libras':
-                    var libras = euros*0.86;
+                    let libras = euros*0.86;
                     return euros+' euros son '+libras+' libras';
                 break;
                 case 'dolares':
-                    var dolares = euros*1.28611;
+                    let dolares = euros*1.28611;
                     return euros+' euros son '+dolares+' dolares';
                 break;
                 case 'yenes':
-                    var yenes = euros*129.852;
+                    let yenes = euros*129.852;
                     return euros+' euros son '+yenes+' yenes';
                 break;
                 default:
@@ -27,8 +27,8 @@
                 break;
             }
         }
-        var euros = Number ( prompt ('Introduce una cantidad de euros'));
-        var moneda = prompt ('Introduce si quieres cambiar a libras, dolares o yenes');
+        let euros = Number ( prompt ('Introduce una cantidad de euros'));
+        let moneda = prompt ('Introduce si quieres cambiar a libras, dolares o yenes');
         console.log (convierteMoneda(euros, moneda));
     </script>
 </body>
